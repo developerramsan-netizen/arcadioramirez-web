@@ -149,7 +149,7 @@
             </div>
             <div class="google-badge-right">
                 <a href="https://search.google.com/local/writereview?placeid=ChIJmUBAgJ-fP44RmIFEGGTbs5Y">✏️ Dejar mi reseña</a>
-                <a href="https://www.google.com/search?q=Arcadio+Ram%C3%ADrez+Servicio+T%C3%A9cnico+Especializado+Kennedy+Bogot%C3%A1#lrd=0x8e3f9f4840384099:0x96b3b31844448198,1" target="_blank" class="btn-see-google">Ver todas en Google ↗</a>
+                <a href="https://www.google.com/maps/place/Arcadio+Ram%C3%ADrez+Servicio+T%C3%A9cnico+Especializado/@4.6270,-74.1089,17z/data=!4m8!3m7!1s0x8e3f9f4840384099:0x96b3b31844448198!8m2!3d4.6270!4d-74.1089!9m1!1b1" target="_blank" class="btn-see-google">Ver todas en Google ↗</a>
             </div>
         </div>`;
     }
