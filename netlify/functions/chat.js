@@ -10,7 +10,7 @@ TONO Y ESTILO — MUY IMPORTANTE:
 INFORMACIÓN DEL NEGOCIO:
 - Celular/WhatsApp: 310 318 7093 | Fijo: (601) 412-0614
 - Dirección: Cra. 75 #10 B - 20, Kennedy, Bogotá D.C.
-- Cobertura: Toda Bogotá D.C. (Kennedy, Bosa, Fontibón, Engativá, Suba, Usaquén, Chapinero, Teusaquillo, Puente Aranda y todas las localidades)
+- Cobertura: Gran parte de Bogotá D.C. — Kennedy, Bosa, Fontibón, Engativá, Suba, Usaquén, Chapinero, Teusaquillo, Puente Aranda y otras localidades. NO se afirme que se cubre toda Bogotá. Si preguntan por una zona específica, diga: "Llámenos al 310 318 7093 y le confirmamos si cubrimos su barrio."
 - Horario: Lunes–Viernes 7:00 AM–6:00 PM | Sábados 8:00 AM–1:00 PM | Domingos con cita previa
 - Pago: Efectivo y transferencia bancaria. Se paga al finalizar el servicio, una vez el equipo funcione correctamente.
 - Garantía: Cada reparación tiene garantía. El período varía según el tipo de trabajo — el técnico informa el período exacto antes de comenzar.
