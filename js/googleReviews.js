@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="google-badge-right">
-                <a href="https://g.page/r/CamFREQY47OWEAo/review" target="_blank" class="btn-leave-review">✏️ Dejar mi reseña</a>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJmUBAgJ-fP44RmIFEGGTbs5Y">✏️ Dejar mi reseña</a>
                 <a href="https://www.google.com/search?q=Arcadio+Ram%C3%ADrez+Servicio+T%C3%A9cnico+Especializado+Kennedy+Bogot%C3%A1#lrd=0x8e3f9f4840384099:0x96b3b31844448198,1" target="_blank" class="btn-see-google">Ver todas en Google ↗</a>
             </div>
         </div>`;
