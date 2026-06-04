@@ -70,14 +70,23 @@
         // Render tarjetas
         track.innerHTML = allReviews.map(reviewCard).join('');
 
-        // ── CLAVE: calcular ancho en píxeles reales ──────
-        // Usando el ancho real del viewport (no del track)
+        // ── Calcular ancho en píxeles reales ──────────────
         const vpWidth = viewport.offsetWidth;
+
+        // Guard: si el viewport aún no tiene dimensiones, reintenta en el
+        // próximo frame (ocurre al cargar mientras el DOM no está listo).
+        if (!vpWidth) {
+            requestAnimationFrame(renderCarousel);
+            return;
+        }
+
         const cardPx = (vpWidth - GAP * (visibleCount - 1)) / visibleCount;
 
         track.querySelectorAll('.carousel-card').forEach(c => {
-            c.style.width = cardPx + 'px';
-            c.style.minWidth = cardPx + 'px';
+            // Usar flex shorthand como inline style para superar cualquier
+            // flex-basis del CSS de clase (.review-card).
+            c.style.flex = `0 0 ${cardPx}px`;
+            c.style.maxWidth = `${cardPx}px`;
         });
 
         // Mover el track
@@ -140,7 +149,7 @@
             </div>
             <div class="google-badge-right">
                 <a href="https://g.page/r/CamFREQY47OWEAo/review" target="_blank" class="btn-leave-review">✏️ Dejar mi reseña</a>
-                <a href="https://www.google.com/maps/place/Arcadio+Ram%C3%ADrez+Servicio+T%C3%A9cnico+Especializado" target="_blank" class="btn-see-google">Ver todas en Google ↗</a>
+                <a href="https://www.google.com/search?q=Arcadio+Ram%C3%ADrez+Servicio+T%C3%A9cnico+Especializado+Kennedy+Bogot%C3%A1#lrd=0x8e3f9f4840384099:0x96b3b31844448198,1" target="_blank" class="btn-see-google">Ver todas en Google ↗</a>
             </div>
         </div>`;
     }

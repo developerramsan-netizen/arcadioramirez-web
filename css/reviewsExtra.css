@@ -18,9 +18,12 @@
 }
 
 /* ── TARJETAS ─────────────────────────────────────────── */
-/* El ancho real lo pone el JS en píxeles, aquí solo estilos visuales */
+/* El ancho real lo pone el JS en píxeles, aquí solo estilos visuales.
+   flex: 0 0 auto es crítico: deja que el `flex-basis` inline del JS
+   tome efecto en vez del shorthand del .review-card en style.css */
 .carousel-card {
-    flex-shrink: 0;
+    flex: 0 0 auto;       /* <-- permite que JS controle el ancho via flex-basis */
+    min-width: 0;         /* <-- anula el min-width: 280px heredado */
     box-sizing: border-box;
     background: var(--white);
     border-radius: 12px;
