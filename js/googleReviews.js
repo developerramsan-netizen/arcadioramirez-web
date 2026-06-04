@@ -147,9 +147,9 @@
                     <div class="badge-count">${data.totalReviews} reseñas en Google</div>
                 </div>
             </div>
-           <div class="google-badge-right">
-            <a href="https://search.google.com/local/writereview?placeid=ChIJmUBAgJ-fP44RmIFEGGTbs5Y" target="_blank" rel="noopener" class="btn-leave-review">✏️ Dejar mi reseña</a>
-            <a href="https://www.google.com/maps/search/Arcadio+Ramirez+Servicio+Tecnico+Especializado+Kennedy+Bogota" target="_blank" rel="noopener" class="btn-see-google">Ver todas en Google ↗</a>
+            <div class="google-badge-right">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJmUBAgJ-fP44RmIFEGGTbs5Y" target="_blank" rel="noopener" class="btn-leave-review">✏️ Dejar mi reseña</a>
+    <a href="https://www.google.com/maps/place/?q=place_id:ChIJmUBAgJ-fP44RmIFEGGTbs5Y" target="_blank" rel="noopener" class="btn-see-google">Ver todas en Google ↗</a>
 </div>
         </div>`;
     }
