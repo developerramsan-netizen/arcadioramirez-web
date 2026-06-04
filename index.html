@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcadio Ramírez – Servicio Técnico Especializado | Bogotá</title>
+    <meta name="description" content="Reparación de lavadoras, neveras y secadoras en Bogotá. +40 años de experiencia. Servicio a domicilio. ¡Llámenos ahora! (601) 4120614" />
+    <meta name="keywords" content="reparación lavadoras Bogotá, servicio técnico neveras Kennedy, arreglo secadoras Bogotá, técnico electrodomésticos, Arcadio Ramírez" />
+    <meta property="og:title" content="Arcadio Ramírez – Servicio Técnico Especializado" />
+    <meta property="og:description" content="+40 años reparando lavadoras, neveras y secadoras en Bogotá. ¡Llámenos hoy!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lib/img/1771454515320_image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brands.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+</head>
+<body>
+
+    <!-- ── BARRA DE ANUNCIO ───────────────────────────────────── -->
+    <div class="announce-bar">
+        <!-- Desktop: estático -->
+        <div class="announce-inner announce-desktop">
+            <span>✅ Diagnóstico</span>
+            <span class="announce-sep">·</span>
+            <span>🛡️Garantía</span>
+            <span class="announce-sep">·</span>
+            <span>🏠 Servicio a domicilio en Bogotá</span>
+            <span class="announce-sep">·</span>
+            <span>⭐ 4.8 / 5 en Google</span>
+            <span class="announce-sep">·</span>
+            <a href="tel:3103187093" class="announce-cta-link">📞 310 318 7093</a>
+        </div>
+        <!-- Móvil: marquee en loop -->
+        <div class="announce-mobile">
+            <div class="announce-track">
+                <span>✅ Diagnóstico</span>
+                <span class="announce-sep">·</span>
+                <span>🛡️ Garantía</span>
+                <span class="announce-sep">·</span>
+                <span>🏠 Servicio a domicilio Bogotá</span>
+                <span class="announce-sep">·</span>
+                <span>⭐ 4.8/5 en Google · 45 reseñas</span>
+                <span class="announce-sep">·</span>
+                <a href="tel:3103187093" class="announce-cta-link">📞 310 318 7093</a>
+                <span class="announce-sep" style="margin:0 20px;"></span>
+                <!-- Duplicado para loop continuo -->
+                <span>✅ Diagnóstico</span>
+                <span class="announce-sep">·</span>
+                <span>🛡️ Garantía</span>
+                <span class="announce-sep">·</span>
+                <span>🏠 Servicio a domicilio Bogotá</span>
+                <span class="announce-sep">·</span>
+                <span>⭐ 4.8/5 en Google · 45 reseñas</span>
+                <span class="announce-sep">·</span>
+                <a href="tel:3103187093" class="announce-cta-link">📞 310 318 7093</a>
+                <span style="margin:0 20px;"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── NAVIGATION ─────────────────────────────────────────── -->
+    <nav id="main-nav">
+        <div class="nav-logo">
+            <img class="house-icon" src="lib/img/LogoArcadioRamirez_Negativo.png" alt="Logo Arcadio Ramírez" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Quiénes Somos</a></li>
+            <li><a href="#proceso">Cómo Funciona</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="tel:3103187093" class="nav-cta">📞 Llamar Ahora</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ── MOBILE NAV ─────────────────────────────────────────── -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileNav()"></div>
+    <aside class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Cerrar menú">✕</button>
+        <div class="mobile-nav-logo">
+            <img src="lib/img/LogoArcadioRamirez_Negativo.png" alt="Arcadio Ramírez" />
+        </div>
+        <ul>
+            <li><a href="#servicios" onclick="closeMobileNav()">🔧 Servicios</a></li>
+            <li><a href="#nosotros" onclick="closeMobileNav()">👨‍👦 Quiénes Somos</a></li>
+            <li><a href="#proceso" onclick="closeMobileNav()">📋 Cómo Funciona</a></li>
+            <li><a href="#precios" onclick="closeMobileNav()">💰 Precios</a></li>
+            <li><a href="#faq" onclick="closeMobileNav()">❓ Preguntas Frecuentes</a></li>
+            <li><a href="#resenas" onclick="closeMobileNav()">⭐ Reseñas</a></li>
+            <li><a href="#contacto" onclick="closeMobileNav()">📍 Contacto</a></li>
+        </ul>
+        <div class="mobile-nav-ctas">
+            <a href="tel:3103187093" class="mobile-nav-call">📞 310 318 7093</a>
+            <a href="https://wa.me/573103187093" target="_blank" class="mobile-nav-whatsapp">💬 WhatsApp</a>
+        </div>
+        <div class="mobile-nav-trust">⭐ 4.8 / 5 · 45 reseñas en Google</div>
+    </aside>
+
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">+40 Años de Experiencia · Bogotá</div>
+                <h1>Reparamos sus<br><span>Electrodomésticos</span><br>Como Nuevos</h1>
+                <p class="hero-sub">
+                    Lavadoras, neveras y secadoras, repuestos de calidad
+                    y garantía en cada trabajo. Servicio a domicilio en Bogotá.
+                </p>
+                <div class="hero-actions">
+                    <a href="tel:3103187093" class="btn-primary">📞 310 318 7093</a>
+                    <a href="https://wa.me/573103187093" target="_blank" class="btn-secondary">💬 WhatsApp</a>
+                </div>
+                <div class="hero-trust-pills">
+                    <span class="trust-pill">✅ Diagnóstico gratis</span>
+                    <span class="trust-pill">🛡️ Con garantía</span>
+                    <span class="trust-pill">🏠 A domicilio</span>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="hero-rating-text">
+                        <strong>4.8 / 5.0</strong> · 45 reseñas en Google
+                    </div>
+                </div>
+            </div>
+            <div class="hero-brands-block">
+                <p class="hero-brands-title">Marcas que reparamos</p>
+                <div class="hero-brands-grid">
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoSamsung.png" alt="Samsung" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoLg.png" alt="LG" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoWhirlpool.png" alt="Whirlpool" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoMabe.png" alt="Mabe" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <svg viewBox="0 0 120 46" class="hbi-logo"><rect x="4" y="5" width="112" height="36" rx="18" fill="rgba(237,28,36,.8)" /><text x="60" y="30" text-anchor="middle" font-family="'Arial Black',sans-serif" font-size="20" font-weight="900" fill="#fff" letter-spacing="1.5">BOSCH</text></svg>
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoHaceb.png" alt="Haceb" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoElectrolux.png" alt="Electrolux" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item">
+                        <img src="lib/img/LogoChallenger.png" alt="Challenger" class="hbi-logo" />
+                    </div>
+                    <div class="hero-brand-item hero-brand-mas">
+                        <span>+ más marcas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ── SERVICES ───────────────────────────────────────────── -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-label">Nuestros Servicios</div>
+            <h2 class="section-title">Todo Lo Que Necesita Para Sus <span>Electrodomésticos</span></h2>
+            <p class="section-sub">Técnicos capacitados, repuestos de calidad y respaldo garantizado en cada visita.</p>
+            <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <span class="service-icon">🔍</span>
+                    <h3>Diagnóstico</h3>
+                    <p>Evaluación completa del problema antes de cualquier intervención. Si autoriza la reparación, el diagnóstico es <span class="service-icon_txt">gratuito.</span></p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <span class="service-icon">🔧</span>
+                    <h3>Reparación</h3>
+                    <p>Solución profesional de fallas mecánicas, eléctricas o electrónicas en lavadoras, neveras y secadoras de las marcas más reconocidas.</p>
+                    <span class="service-icon_txt">Con Respaldo</span>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Mantenimiento</h3>
+                    <p>Servicio preventivo para prolongar la vida útil de sus electrodomésticos. Limpieza profunda y ajuste de componentes.</p>
+                    <span class="service-icon_txt">Preventivo</span>
+                </div>
+                <div class="service-card reveal reveal-delay-4">
+                    <span class="service-icon">🏠</span>
+                    <h3>A Domicilio</h3>
+                    <p>Atendemos en su hogar o negocio. Horarios flexibles de lunes a sábado.</p>
+                    <span class="service-icon_txt">Bogotá D.C.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SOBRE NOSOTROS ─────────────────────────────────────── -->
+    <section class="section sobre-section" id="nosotros">
+        <div class="container">
+            <div class="section-label">¿Quiénes Somos?</div>
+            <h2 class="section-title">Una Familia al Servicio de <span>Bogotá</span></h2>
+            <div class="sobre-grid">
+                <div class="sobre-texto reveal-left">
+                    <p class="sobre-lead">
+                        Somos una empresa familiar con más de <strong>40 años de trayectoria</strong>
+                        dedicados a la reparación de electrodomésticos en Bogotá.
+                        <strong>Arcadio Ramírez</strong> fundó este negocio con compromiso y vocación de servicio,
+                        principios que hoy siguen guiando cada trabajo que realizamos.
+                    </p>
+                    <p class="sobre-lead">
+                        Atendemos con honestidad y responsabilidad: identificamos el problema real,
+                        usamos repuestos de calidad y solo damos por terminado el trabajo cuando el equipo funciona perfectamente.
+                        <span class="sobre-body">La satisfacción y recomendación de nuestros clientes son el reflejo de nuestro compromiso, calidad y dedicación en cada servicio que ofrecemos.</span>
+                    </p>
+                    <div class="sobre-valores">
+                        <div class="valor-item">
+                            <span class="valor-icon">🏆</span>
+                            <div><strong>Experiencia</strong><p>+40 años en el mercado bogotano</p></div>
+                        </div>
+                        <div class="valor-item">
+                            <span class="valor-icon">👨‍👦</span>
+                            <div><strong>Empresa familiar</strong><p>Dos generaciones al servicio</p></div>
+                        </div>
+                        <div class="valor-item">
+                            <span class="valor-icon">✅</span>
+                            <div><strong>Garantía</strong><p>Respaldo real en cada reparación</p></div>
+                        </div>
+                        <div class="valor-item">
+                            <span class="valor-icon">🚗</span>
+                            <div><strong>A domicilio</strong><p>Vamos hasta donde usted esté</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-fotos reveal-right">
+                    <div class="foto-principal-wrap">
+                        <img src="lib/img/1771454515320_image.png"
+                             alt="Arcadio Ramírez trabajando en nevera"
+                             class="foto-principal" />
+                        <div class="foto-badge-fundador">
+                            <strong>Arcadio Ramírez</strong>
+                            <span>Fundador · +40 años de experiencia</span>
+                        </div>
+                    </div>
+                    <div class="foto-secundaria-wrap">
+                        <img src="lib/img/Camioneta.jpg"
+                             alt="Camioneta de servicio a domicilio"
+                             class="foto-secundaria" />
+                        <div class="foto-badge-camioneta">🚗 Servicio a domicilio en Bogotá D.C.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS BAND ─────────────────────────────────────────── -->
+    <div class="stats-band">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-num" data-target="40" data-suffix="+">0</div>
+                <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-target="4.8" data-suffix="" data-decimal="1">0</div>
+                <div class="stat-label">Calificación Google</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-target="45" data-suffix="">0</div>
+                <div class="stat-label">Reseñas verificadas</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num" data-target="100" data-suffix="%">0</div>
+                <div class="stat-label">Servicio garantizado</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── PRECIOS ────────────────────────────────────────────── -->
+    <section class="section precios-section" id="precios">
+        <div class="container">
+            <div class="section-label">Tarifas Orientativas</div>
+            <h2 class="section-title">¿Cuánto Cuesta la <span>Reparación</span>?</h2>
+            <p class="section-sub">
+                Precios de referencia en Bogotá. El valor exacto se define tras el diagnóstico.
+                <strong>Sin sorpresas — presupuesto antes de iniciar.</strong>
+            </p>
+            <div class="precios-grid">
+                <div class="precio-card">
+                    <div class="precio-icon">🔍</div>
+                    <h3>Diagnóstico</h3>
+                    <div class="precio-valor precio-free">Sin Costo</div>
+                    <p>Si autoriza la reparación, el diagnóstico no tiene cobro adicional.</p>
+                    <ul class="precio-incluye">
+                        <li>✔ Visita a domicilio</li>
+                        <li>✔ Evaluación completa</li>
+                        <li>✔ Presupuesto detallado</li>
+                    </ul>
+                </div>
+                <div class="precio-card precio-card--featured">
+                    <div class="precio-badge-top">Más solicitado</div>
+                    <div class="precio-icon">🫧</div>
+                    <h3>Lavadora</h3>
+                    <div class="precio-valor">$80.000 – $350.000</div>
+                    <p>Según falla y repuesto. Mecánica, eléctrica o electrónica.</p>
+                    <ul class="precio-incluye">
+                        <li>✔ Falla de centrifugado</li>
+                        <li>✔ No enciende / no drena</li>
+                        <li>✔ Cambio de correa o bomba</li>
+                    </ul>
+                </div>
+                <div class="precio-card">
+                    <div class="precio-icon">🧊</div>
+                    <h3>Nevera</h3>
+                    <div class="precio-valor">$90.000 – $400.000</div>
+                    <p>Carga de gas, compresor, termostato y más.</p>
+                    <ul class="precio-incluye">
+                        <li>✔ No enfría</li>
+                        <li>✔ Carga de gas refrigerante</li>
+                        <li>✔ Ruido o vibración</li>
+                    </ul>
+                </div>
+                <div class="precio-card">
+                    <div class="precio-icon">🌀</div>
+                    <h3>Secadora</h3>
+                    <div class="precio-valor">$80.000 – $300.000</div>
+                    <p>Resistencia, termostato, motor y revisión de ductos.</p>
+                    <ul class="precio-incluye">
+                        <li>✔ No calienta</li>
+                        <li>✔ Se apaga sola</li>
+                        <li>✔ Tambor no gira</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="precios-nota">
+                💡 <strong>¿No sabe cuánto cuesta su reparación?</strong>
+                Llámenos y le damos orientación sin compromiso.
+                <a href="https://wa.me/573103187093" target="_blank">Consultar por WhatsApp →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ───────────────────────────────────────── -->
+    <section class="section how-bg" id="proceso">
+        <div class="container container--narrow">
+            <div class="section-label">Proceso Simple</div>
+            <h2 class="section-title">¿Cómo <span>Funciona</span>?</h2>
+            <div class="steps">
+                <div class="step reveal reveal-delay-1">
+                    <div class="step-num">1</div>
+                    <h3>Llámenos</h3>
+                    <p>Contáctenos al (601) 412-0614 · 310 318 7093 o por WhatsApp. Cuéntenos el problema y agendamos una visita.</p>
+                </div>
+                <div class="step reveal reveal-delay-2">
+                    <div class="step-num">2</div>
+                    <h3>Diagnóstico</h3>
+                    <p>El técnico visita su hogar, evalúa el equipo y le entrega un presupuesto transparente sin costo.</p>
+                </div>
+                <div class="step reveal reveal-delay-3">
+                    <div class="step-num">3</div>
+                    <h3>Reparación</h3>
+                    <p>Con su aprobación, realizamos la reparación en el lugar usando repuestos de calidad.</p>
+                </div>
+                <div class="step reveal reveal-delay-4">
+                    <div class="step-num">4</div>
+                    <h3>Garantía</h3>
+                    <p>Entregamos el equipo funcionando perfectamente con garantía por el servicio realizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────── -->
+    <section class="section faq-section" id="faq">
+        <div class="container container--narrow">
+            <div class="section-label">Preguntas Frecuentes</div>
+            <h2 class="section-title">Lo Que Siempre <span>Preguntan</span></h2>
+            <p class="section-sub">Si su duda no está aquí, escríbanos por WhatsApp — respondemos rápido.</p>
+            <div class="faq-list">
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Atienden en mi barrio / localidad?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>Atendemos toda Bogotá D.C. — Kennedy, Bosa, Fontibón, Engativá, Suba, Usaquén, Chapinero, Teusaquillo, Puente Aranda y todas las demás localidades. ¡Llámenos y confirmamos disponibilidad!</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuánto demora la reparación?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>La mayoría de reparaciones se resuelven en la misma visita (1–2 horas). Si se necesita un repuesto especial, coordinamos una segunda visita en 1 a 3 días hábiles.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Usan repuestos originales?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>Sí. Trabajamos con repuestos originales o de referencia de alta calidad. Le informamos siempre antes de instalar cualquier pieza y usted decide con información clara.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-4">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Qué garantía dan por la reparación?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>Cada reparación tiene garantía. Si el mismo problema vuelve a aparecer dentro del período de garantía, regresamos sin costo adicional. Aplica sobre mano de obra y repuesto instalado.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-5">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿El diagnóstico tiene costo si no autorizo la reparación?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>Si autoriza la reparación, el diagnóstico es completamente gratuito. Si decide no proceder, se cobra únicamente el valor del desplazamiento a domicilio.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-6">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuáles formas de pago aceptan?<span class="faq-icon">+</span></button>
+                    <div class="faq-respuesta">
+                        <p>Aceptamos efectivo y transferencia bancaria. El pago se realiza al finalizar el servicio, una vez el equipo quede funcionando correctamente y usted esté satisfecho.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-cta">
+                <p>¿Tiene otra pregunta?</p>
+                <a href="https://wa.me/573103187093" target="_blank" class="btn-primary" style="display:inline-flex;gap:8px;align-items:center;">💬 Preguntar por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── REVIEWS ────────────────────────────────────────────── -->
+    <section class="section" id="resenas">
+        <div class="container">
+            <div class="section-label">Reseñas de Google</div>
+            <h2 class="section-title">Lo Que Dicen Nuestros <span>Clientes</span></h2>
+            <p class="section-sub">Más de 45 reseñas verificadas en Google con promedio de <span class="sobre-body">4.8 estrellas.</span></p>
+            <div class="carousel-wrapper" id="carousel-wrapper">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-track"></div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="carousel-prev" onclick="carouselPrev()" aria-label="Anterior">&#8592;</button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                    <button class="carousel-btn" id="carousel-next" onclick="carouselNext()" aria-label="Siguiente">&#8594;</button>
+                </div>
+            </div>
+            <div id="google-reviews-badge"></div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
+    <section class="section contact-bg" id="contacto">
+        <div class="container" style="position:relative; z-index:1;">
+            <div class="section-label" style="color:var(--gold);">Contáctenos</div>
+            <h2 class="section-title" style="color:var(--white);">¿Su Equipo Tiene un Problema? <span style="color:var(--gold);">Escríbanos</span></h2>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Teléfono / WhatsApp</h4>
+                            <a href="https://wa.me/3103187093">(601) 412-0614 · 310 318 7093</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Cra. 75 #10 B - 20, Kennedy<br>Bogotá, Cundinamarca</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a viernes: 7:00 AM – 6:00 PM<br>Sábados: 8:00 AM – 1:00 PM<br>Domingos: Con cita previa</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🗺️</div>
+                        <div>
+                            <h4>Zona de Cobertura</h4>
+                            <p>Bogotá D.C. — todas las localidades</p>
+                        </div>
+                    </div>
+                    <div class="map-wrap">
+                        <p class="map-address">📍 Cra. 75 #10 B - 20, Kennedy, Bogotá</p>
+                        <div class="map-frame">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9!2d-74.1347!3d4.6242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f4840384099%3A0x96b3b31844448198!2sCra.%2075%20%2310b-20%2C%20Kennedy%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000"
+                                    width="100%" height="200"
+                                    style="border:0; display:block;"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Ubicación Arcadio Ramírez">
+                            </iframe>
+                            <a href="https://www.google.com/maps?q=Cra.+75+%2310+B+-+20,+Kennedy,+Bogotá"
+                               target="_blank" class="map-link">📍 Abrir en Google Maps →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Solicitar Visita Técnica</h3>
+                    <!-- Campos del formulario -->
+                    <div id="form-fields">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" id="f-nombre" placeholder="Su nombre" />
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <input type="tel" id="f-telefono" placeholder="300 000 0000" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Electrodoméstico</label>
+                            <select id="f-equipo">
+                                <option value="">Seleccione...</option>
+                                <option>Lavadora</option>
+                                <option>Nevera / Refrigerador</option>
+                                <option>Secadora</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripción del problema</label>
+                            <textarea id="f-problema" placeholder="Cuéntenos qué le pasa al equipo..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Barrio / Localidad</label>
+                            <input type="text" id="f-barrio" placeholder="Ej: Kennedy, Bosa, Fontibón..." />
+                        </div>
+                        <button class="form-submit" onclick="enviarWhatsApp()">💬 Enviar por WhatsApp</button>
+                        <p class="form-note">Le responderemos en minutos · Sin costo ni compromiso</p>
+                    </div>
+                    <!-- Estado de éxito -->
+                    <div class="form-success" id="form-success">
+                        <span class="form-success-icon">✅</span>
+                        <h3>¡Mensaje Preparado!</h3>
+                        <p>Tu solicitud está lista en WhatsApp. Completa el envío desde allí y te confirmaremos la visita en minutos.</p>
+                        <button class="form-success-reset" onclick="resetContactForm()">Enviar otra solicitud</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="lib/img/LogoArcadioRamirez_Negativo.png" alt="Arcadio Ramírez" class="footer-logo" />
+                <p>Servicio Técnico Especializado en Electrodomésticos</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Quiénes Somos</a>
+                <a href="#precios">Precios</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-contact">
+                <a href="tel:3103187093">📞 310 318 7093</a>
+                <a href="https://wa.me/573103187093" target="_blank">💬 WhatsApp</a>
+                <p>Cra. 75 #10 B - 20, Kennedy, Bogotá</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Arcadio Ramírez Servicio Técnico Especializado</strong> · Kennedy, Bogotá D.C.</p>
+            <p style="margin-top:6px;">Diseño web: <a href="tel:3163669216">Sandra Ramírez · 316 366 9216</a></p>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING CTAs ─────────────────────────────────────── -->
+    <div class="float-ctas">
+        <button class="float-chat-btn" id="chat-toggle-btn" onclick="toggleChat()" aria-label="Abrir asistente virtual">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+            </svg>
+            <span>Asistente</span>
+            <span class="chat-unread-dot" id="chat-unread-dot" aria-hidden="true"></span>
+        </button>
+        <a href="https://wa.me/573103187093" class="float-whatsapp" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.523 5.855L.057 23.882a.5.5 0 0 0 .61.637l6.228-1.634A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.389l-.361-.214-3.741.981.998-3.648-.235-.374A9.789 9.789 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:3103187093" class="float-phone" aria-label="Llamar">📞 <span>Llamar</span></a>
+    </div>
+
+    <!-- ── CHAT PANEL ────────────────────────────────────────── -->
+    <div class="chat-panel" id="chat-panel" aria-hidden="true" role="dialog" aria-label="Asistente virtual Arcadio Ramírez">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar-icon" aria-hidden="true">🔧</div>
+                <div>
+                    <div class="chat-header-name">Asistente Arcadio Ramírez</div>
+                    <div class="chat-header-status">En línea</div>
+                </div>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChat()" aria-label="Cerrar chat">✕</button>
+        </div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
+        <div class="chat-input-area">
+            <input class="chat-input" id="chat-input" type="text"
+                   placeholder="Escribe tu consulta..."
+                   onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChatMessage();}"
+                   autocomplete="off" />
+            <button class="chat-send-btn" id="chat-send-btn" onclick="sendChatMessage()" aria-label="Enviar">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="css/reviewsExtra.css" />
+    <script src="js/googleReviews.js"></script>
+    <script src="js/chatWidget.js"></script>
+
+    <script>
+                /* ── HAMBURGER MENU ── */
+                function toggleMobileNav() {
+                    const nav = document.getElementById('mobile-nav');
+                    const backdrop = document.getElementById('mobile-nav-backdrop');
+                    const btn = document.getElementById('nav-hamburger');
+                    const isOpen = nav.classList.contains('open');
+                    if (isOpen) { closeMobileNav(); return; }
+                    nav.classList.add('open');
+                    backdrop.classList.add('open');
+                    btn.classList.add('open');
+                    nav.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMobileNav() {
+                    document.getElementById('mobile-nav').classList.remove('open');
+                    document.getElementById('mobile-nav-backdrop').classList.remove('open');
+                    document.getElementById('nav-hamburger').classList.remove('open');
+                    document.getElementById('mobile-nav').setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+                window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMobileNav(); });
+
+                /* ── WHATSAPP FORM ── */
+                function enviarWhatsApp() {
+                    const nombre   = document.getElementById('f-nombre').value.trim();
+                    const telefono = document.getElementById('f-telefono').value.trim();
+                    const equipo   = document.getElementById('f-equipo').value.trim();
+                    const problema = document.getElementById('f-problema').value.trim();
+                    const barrio   = document.getElementById('f-barrio').value.trim();
+                    if (!nombre)   { alert('Por favor ingrese su nombre.');               return; }
+                    if (!telefono) { alert('Por favor ingrese su teléfono de contacto.'); return; }
+                    if (!equipo)   { alert('Por favor seleccione el electrodoméstico.');  return; }
+                    if (!problema) { alert('Por favor describa el problema del equipo.'); return; }
+                    const mensaje =
+`*SOLICITUD DE VISITA TÉCNICA*
+_Arcadio Ramírez - Servicio Técnico_
+-----------------------------
+*Nombre:* ${nombre}
+*Teléfono:* ${telefono}
+*Barrio:* ${barrio || 'No especificado'}
+*Electrodoméstico:* ${equipo}
+*Problema:* ${problema}
+-----------------------------
+Solicito visita técnica a domicilio. ¡Gracias!`;
+                    window.open('https://wa.me/573103187093?text=' + encodeURIComponent(mensaje), '_blank');
+                    // Mostrar estado de éxito
+                    document.getElementById('form-fields').style.display = 'none';
+                    document.getElementById('form-success').classList.add('visible');
+                }
+                function resetContactForm() {
+                    ['f-nombre','f-telefono','f-equipo','f-problema','f-barrio'].forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) el.value = '';
+                    });
+                    document.getElementById('form-fields').style.display = '';
+                    document.getElementById('form-success').classList.remove('visible');
+                }
+
+                /* ── FAQ ── */
+                function toggleFaq(btn) {
+                    const item = btn.closest('.faq-item');
+                    const isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+                    if (!isOpen) item.classList.add('open');
+                }
+
+                /* ── COUNTERS ── */
+                function animateCounters() {
+                    document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+                        const target   = parseFloat(el.dataset.target);
+                        const suffix   = el.dataset.suffix || '';
+                        const decimals = parseInt(el.dataset.decimal || '0');
+                        const duration = 2000;
+                        const start    = performance.now();
+                        function update(now) {
+                            const p = Math.min((now - start) / duration, 1);
+                            const ease = 1 - Math.pow(1 - p, 3);
+                            el.textContent = (target * ease).toFixed(decimals) + suffix;
+                            if (p < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    });
+                }
+                const statsBand = document.querySelector('.stats-band');
+                if (statsBand) {
+                    new IntersectionObserver((entries, obs) => {
+                        entries.forEach(e => { if (e.isIntersecting) { animateCounters(); obs.disconnect(); } });
+                    }, { threshold: 0.4 }).observe(statsBand);
+                }
+
+                /* ── SCROLL REVEAL ── */
+                const revealObs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+                    });
+                }, { threshold: 0.1 });
+                document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* ── SECCIÓN MARCAS ───────────────────────────────────── */
+.brands-section {
+    padding: 64px 5vw;
+    background: var(--white);
+}
+
+.brands-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+/* ── TARJETA ──────────────────────────────────────────── */
+.brand-card {
+    background: var(--white);
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px; /* ← más pequeño */
+    transition: border-color .25s, box-shadow .25s, transform .2s;
+    position: relative;
+    overflow: hidden;
+}
+
+    .brand-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--blue);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+    }
+
+    .brand-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 16px rgba(26,46,171,.10);
+        transform: translateY(-2px);
+    }
+
+        .brand-card:hover::after {
+            transform: scaleX(1);
+        }
+
+/* ── LOGO SVG PEQUEÑO ─────────────────────────────────── */
+.brand-svg {
+    width: 80%; /* ← antes era 100% */
+    max-width: 120px; /* ← límite de ancho */
+    height: 38px; /* ← antes era 56px */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ── TARJETA "Y MÁS" ──────────────────────────────────── */
+.brand-card--more {
+    background: var(--gray-lt);
+    border-style: dashed;
+}
+
+    .brand-card--more:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+.brand-more-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--gray);
+    font-size: .78rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.brand-more-icon {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--blue);
+    line-height: 1;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .brands-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .brand-card {
+        min-height: 62px;
+        padding: 12px 8px;
+    }
+
+    .brand-svg {
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}

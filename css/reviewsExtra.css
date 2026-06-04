@@ -1,0 +1,320 @@
+/* ── CAROUSEL WRAPPER ─────────────────────────────────── */
+.carousel-wrapper {
+    position: relative;
+    margin-top: 40px;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%; /* ← clave para que los px se calculen bien */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    align-items: stretch;
+    will-change: transform;
+}
+
+/* ── TARJETAS ─────────────────────────────────────────── */
+/* El ancho real lo pone el JS en píxeles, aquí solo estilos visuales */
+.carousel-card {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 18px rgba(26,46,171,.12);
+    border-top: 4px solid var(--blue);
+    transition: transform .25s, box-shadow .25s;
+}
+
+    .carousel-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 28px rgba(26,46,171,.18);
+    }
+
+    .carousel-card .review-stars {
+        color: var(--gold);
+        font-size: .9rem;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+  .carousel-card .review-text {
+    font-size: .85rem;
+    line-height: 1.6;
+    color: var(--gray);
+    font-style: italic;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4; /* propiedad estándar */
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    min-height: 5.4em; /* altura uniforme */
+}
+
+    .carousel-card .review-author {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .carousel-card .review-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--blue);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: .95rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+.review-avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+      display: none;
+}
+
+.carousel-card .review-name {
+    font-weight: 600;
+    font-size: .82rem;
+}
+
+.carousel-card .review-via {
+    font-size: .72rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+/* ── CONTROLES ────────────────────────────────────────── */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    background: var(--white);
+    color: var(--blue);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, color .2s, transform .15s, opacity .2s;
+    flex-shrink: 0;
+}
+
+    .carousel-btn:hover:not(:disabled) {
+        background: var(--blue);
+        color: var(--white);
+        transform: scale(1.08);
+    }
+
+    .carousel-btn:disabled {
+        opacity: 0.28;
+        cursor: not-allowed;
+    }
+
+/* ── DOTS ─────────────────────────────────────────────── */
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.carousel-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    background: #d1d5db;
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s, transform .2s;
+}
+
+    .carousel-dot.active {
+        background: var(--blue);
+        transform: scale(1.35);
+    }
+
+    .carousel-dot:hover:not(.active) {
+        background: #9ca3af;
+    }
+
+/* ── SKELETON ─────────────────────────────────────────── */
+.review-skeleton {
+    pointer-events: none;
+}
+
+.skeleton-line {
+    height: 12px;
+    border-radius: 6px;
+    margin-bottom: 9px;
+    background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+}
+
+    .skeleton-line.w100 {
+        width: 100%;
+    }
+
+    .skeleton-line.w80 {
+        width: 80%;
+    }
+
+    .skeleton-line.w60 {
+        width: 60%;
+    }
+
+    .skeleton-line.w40 {
+        width: 40%;
+    }
+
+.skeleton-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.skeleton-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ── GOOGLE BADGE ─────────────────────────────────────── */
+.google-badge-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 22px;
+    margin-top: 28px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.google-badge-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge-stars {
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.badge-score {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.badge-count {
+    font-size: .78rem;
+    color: var(--gray);
+    margin-top: 2px;
+}
+
+.google-badge-right {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-leave-review {
+    background: var(--blue);
+    color: var(--white);
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: .84rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .2s, transform .15s;
+}
+
+    .btn-leave-review:hover {
+        background: var(--blue-lt);
+        transform: translateY(-1px);
+    }
+
+.btn-see-google {
+    color: var(--blue);
+    font-size: .84rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 9px 18px;
+    border: 2px solid var(--blue);
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background .2s, color .2s;
+}
+
+    .btn-see-google:hover {
+        background: var(--blue);
+        color: var(--white);
+    }
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 639px) {
+    .google-badge-carousel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .google-badge-right {
+        width: 100%;
+    }
+
+    .btn-leave-review,
+    .btn-see-google {
+        flex: 1;
+        text-align: center;
+    }
+}
