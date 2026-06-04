@@ -71,12 +71,13 @@
         <ul class="nav-links">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#nosotros">Quiénes Somos</a></li>
-            <li><a href="#proceso">Cómo Funciona</a></li>
-            <li><a href="#precios">Precios</a></li>
+            <li><a href="#problemas">¿Qué le pasa?</a></li>
+            <li><a href="#precios">Servicios</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#resenas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <li><a href="tel:3103187093" class="nav-cta">📞 Llamar Ahora</a></li>
+            <li><a href="https://wa.me/573103187093" target="_blank" class="nav-cta nav-cta-wa">💬 WhatsApp</a></li>
+            <li><a href="tel:3103187093" class="nav-cta">📞 Llamar</a></li>
         </ul>
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" onclick="toggleMobileNav()">
             <span></span>
@@ -95,8 +96,8 @@
         <ul>
             <li><a href="#servicios" onclick="closeMobileNav()">🔧 Servicios</a></li>
             <li><a href="#nosotros" onclick="closeMobileNav()">👨‍👦 Quiénes Somos</a></li>
-            <li><a href="#proceso" onclick="closeMobileNav()">📋 Cómo Funciona</a></li>
-            <li><a href="#precios" onclick="closeMobileNav()">💰 Precios</a></li>
+            <li><a href="#problemas" onclick="closeMobileNav()">🔧 ¿Qué le pasa?</a></li>
+            <li><a href="#precios" onclick="closeMobileNav()">💰 Servicios</a></li>
             <li><a href="#faq" onclick="closeMobileNav()">❓ Preguntas Frecuentes</a></li>
             <li><a href="#resenas" onclick="closeMobileNav()">⭐ Reseñas</a></li>
             <li><a href="#contacto" onclick="closeMobileNav()">📍 Contacto</a></li>
@@ -209,6 +210,63 @@
         </div>
     </section>
 
+    <!-- ── PROBLEMAS COMUNES ─────────────────────────────────── -->
+    <section class="section problemas-section" id="problemas">
+        <div class="container">
+            <div class="section-label">Diagnóstico Orientativo</div>
+            <h2 class="section-title">¿Qué problema tiene su <span>electrodoméstico</span>?</h2>
+            <p class="section-sub">Seleccione el síntoma y nuestro asesor le orienta sobre posibles causas y soluciones — antes de agendar la visita.</p>
+            <div class="problemas-grid">
+                <div class="problema-grupo reveal reveal-delay-1">
+                    <div class="problema-grupo-header">
+                        <span class="problema-icono">🫧</span>
+                        <h3>Lavadora</h3>
+                    </div>
+                    <ul class="problema-lista">
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora no enciende')">No enciende</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora no centrifuga')">No centrifuga</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora no desagua')">No desagua</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora vibra mucho o hace ruido')">Vibra o hace ruido</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora tiene fuga de agua')">Fuga de agua</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi lavadora no lava bien la ropa')">No lava bien</button></li>
+                    </ul>
+                </div>
+                <div class="problema-grupo reveal reveal-delay-2">
+                    <div class="problema-grupo-header">
+                        <span class="problema-icono">🧊</span>
+                        <h3>Nevera</h3>
+                    </div>
+                    <ul class="problema-lista">
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi nevera no enfría')">No enfría</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi nevera congela demasiado')">Congela demasiado</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi nevera acumula hielo o escarcha')">Acumula escarcha</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi nevera hace mucho ruido')">Hace mucho ruido</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi nevera derrama o acumula agua')">Derrama agua</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('La luz de mi nevera no enciende')">Luz no enciende</button></li>
+                    </ul>
+                </div>
+                <div class="problema-grupo reveal reveal-delay-3">
+                    <div class="problema-grupo-header">
+                        <span class="problema-icono">🌀</span>
+                        <h3>Secadora</h3>
+                    </div>
+                    <ul class="problema-lista">
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi secadora no calienta')">No calienta</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi secadora se apaga sola')">Se apaga sola</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('El tambor de mi secadora no gira')">Tambor no gira</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi secadora tarda demasiado en secar')">Tarda demasiado</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi secadora huele a quemado')">Huele a quemado</button></li>
+                        <li><button class="problema-btn" onclick="abrirChatConProblema('Mi secadora no enciende')">No enciende</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="problemas-cta">
+                <p>¿Su problema no está en esta lista?</p>
+                <button class="btn-primary problemas-cta-btn" onclick="toggleChat()">💬 Descríbanos qué está pasando</button>
+            </div>
+        </div>
+    </section>
+
     <!-- ── SOBRE NOSOTROS ─────────────────────────────────────── -->
     <section class="section sobre-section" id="nosotros">
         <div class="container">
@@ -271,19 +329,19 @@
     <div class="stats-band">
         <div class="stats-inner">
             <div class="stat">
-                <div class="stat-num" data-target="40" data-suffix="+">0</div>
+                <div class="stat-num" data-target="40" data-suffix="+">40+</div>
                 <div class="stat-label">Años de experiencia</div>
             </div>
             <div class="stat">
-                <div class="stat-num" data-target="4.8" data-suffix="" data-decimal="1">0</div>
+                <div class="stat-num" data-target="4.8" data-suffix="" data-decimal="1">4.8</div>
                 <div class="stat-label">Calificación Google</div>
             </div>
             <div class="stat">
-                <div class="stat-num" data-target="45" data-suffix="">0</div>
+                <div class="stat-num" data-target="45" data-suffix="">45</div>
                 <div class="stat-label">Reseñas verificadas</div>
             </div>
             <div class="stat">
-                <div class="stat-num" data-target="100" data-suffix="%">0</div>
+                <div class="stat-num" data-target="100" data-suffix="%">100%</div>
                 <div class="stat-label">Servicio garantizado</div>
             </div>
         </div>
@@ -292,17 +350,17 @@
     <!-- ── PRECIOS ────────────────────────────────────────────── -->
     <section class="section precios-section" id="precios">
         <div class="container">
-            <div class="section-label">Tarifas Orientativas</div>
-            <h2 class="section-title">¿Cuánto Cuesta la <span>Reparación</span>?</h2>
+            <div class="section-label">Nuestras Reparaciones</div>
+            <h2 class="section-title">¿Qué Reparamos y <span>Qué Incluye</span>?</h2>
             <p class="section-sub">
-                Precios de referencia en Bogotá. El valor exacto se define tras el diagnóstico.
-                <strong>Sin sorpresas — presupuesto antes de iniciar.</strong>
+                El precio exacto siempre se define tras el diagnóstico presencial en su hogar.
+                <strong>Sin sorpresas — le informamos antes de empezar.</strong>
             </p>
             <div class="precios-grid">
                 <div class="precio-card">
                     <div class="precio-icon">🔍</div>
                     <h3>Diagnóstico</h3>
-                    <p>Visitamos tu domicilio, evaluamos el equipo y te damos un presupuesto. Si apruebas la reparación, el diagnóstico <strong>no tiene costo adicional</strong>. Si decides no proceder, solo se cobra el desplazamiento.</p>
+                    <p>Visitamos su domicilio, evaluamos el equipo y le damos un presupuesto. Si aprueba la reparación, el diagnóstico <strong>no tiene costo adicional</strong>. Si decide no proceder, solo se cobra el desplazamiento.</p>
                     <ul class="precio-incluye">
                         <li>✔ Visita a domicilio</li>
                         <li>✔ Evaluación completa</li>
@@ -345,9 +403,12 @@
                 </div>
             </div>
             <div class="precios-nota">
-                💡 <strong>¿No sabe cuánto cuesta su reparación?</strong>
-                Llámenos y le damos orientación sin compromiso.
-                <a href="https://wa.me/573103187093" target="_blank">Consultar por WhatsApp →</a>
+                💡 <strong>¿No sabe si vale la pena reparar su equipo?</strong>
+                Cuéntenos el problema y le orientamos sin costo ni compromiso.
+                <span class="precios-nota-ctas">
+                    <button class="nota-chat-btn" onclick="toggleChat()">💬 Consultar al asesor</button>
+                    <a href="https://wa.me/573103187093" target="_blank">o escribir por WhatsApp →</a>
+                </span>
             </div>
         </div>
     </section>
@@ -361,7 +422,7 @@
                 <div class="step reveal reveal-delay-1">
                     <div class="step-num">1</div>
                     <h3>Llámenos</h3>
-                    <p>Contáctenos al (601) 412-0614 · 310 318 7093 o por WhatsApp. Cuéntenos el problema y agendamos una visita.</p>
+                    <p>Llámenos al 310 318 7093 o escríbanos por WhatsApp. Cuéntenos el problema y agendamos su visita.</p>
                 </div>
                 <div class="step reveal reveal-delay-2">
                     <div class="step-num">2</div>
@@ -398,7 +459,7 @@
                 <div class="faq-item reveal reveal-delay-2">
                     <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cuánto demora la reparación?<span class="faq-icon">+</span></button>
                     <div class="faq-respuesta">
-                        <p>El tiempo de reparación varía según la complejidad de la falla y la disponibilidad de los repuestos requeridos.</p>
+                        <p>La mayoría de reparaciones se resuelven <strong>en la misma visita</strong> (1 a 3 horas). Si se requiere un repuesto especial, lo conseguimos en 1 a 3 días hábiles y regresamos a instalarlo. Siempre le avisamos antes.</p>
                     </div>
                 </div>
                 <div class="faq-item reveal reveal-delay-3">
@@ -410,7 +471,7 @@
                 <div class="faq-item reveal reveal-delay-4">
                     <button class="faq-pregunta" onclick="toggleFaq(this)">¿Qué garantía dan por la reparación?<span class="faq-icon">+</span></button>
                     <div class="faq-respuesta">
-                        <p>Cada reparación tiene garantía. Si el mismo problema vuelve a aparecer dentro del período de garantía, regresamos sin costo adicional. Aplica sobre mano de obra y repuesto instalado.</p>
+                        <p>Cada reparación tiene garantía. Si el mismo problema regresa dentro del período cubierto, volvemos sin costo adicional. El técnico le informa el período exacto antes de comenzar el trabajo, según el tipo de reparación. Aplica sobre mano de obra y repuesto instalado.</p>
                     </div>
                 </div>
                 <div class="faq-item reveal reveal-delay-5">
@@ -426,9 +487,14 @@
                     </div>
                 </div>
             </div>
+            <div class="faq-chat-cta">
+                <p>¿Tiene dudas sobre lo que le pasa a su equipo?</p>
+                <button class="faq-chat-btn" onclick="toggleChat()">💬 Consultar al asesor</button>
+            </div>
+
             <div class="faq-cta">
-                <p>¿Tiene otra pregunta?</p>
-                <a href="https://wa.me/573103187093" target="_blank" class="btn-primary" style="display:inline-flex;gap:8px;align-items:center;">💬 Preguntar por WhatsApp</a>
+                <p>¿Prefiere hablar directamente?</p>
+                <a href="https://wa.me/573103187093" target="_blank" class="btn-primary" style="display:inline-flex;gap:8px;align-items:center;">💬 Escribir por WhatsApp</a>
             </div>
         </div>
     </section>
@@ -511,10 +577,12 @@
                             <div class="form-group">
                                 <label>Nombre</label>
                                 <input type="text" id="f-nombre" placeholder="Su nombre" />
+                                <span class="field-error" id="error-nombre">Por favor escriba su nombre.</span>
                             </div>
                             <div class="form-group">
                                 <label>Teléfono</label>
                                 <input type="tel" id="f-telefono" placeholder="300 000 0000" />
+                                <span class="field-error" id="error-telefono">Por favor ingrese su teléfono.</span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -526,10 +594,12 @@
                                 <option>Secadora</option>
                                 <option>Otro</option>
                             </select>
+                            <span class="field-error" id="error-equipo">Por favor seleccione el electrodoméstico.</span>
                         </div>
                         <div class="form-group">
                             <label>Descripción del problema</label>
                             <textarea id="f-problema" placeholder="Cuéntenos qué le pasa al equipo..."></textarea>
+                            <span class="field-error" id="error-problema">Por favor describa el problema del equipo.</span>
                         </div>
                         <div class="form-group">
                             <label>Barrio / Localidad</label>
@@ -542,7 +612,7 @@
                     <div class="form-success" id="form-success">
                         <span class="form-success-icon">✅</span>
                         <h3>¡Mensaje Preparado!</h3>
-                        <p>Tu solicitud está lista en WhatsApp. Completa el envío desde allí y te confirmaremos la visita en minutos.</p>
+                        <p>Su solicitud está lista en WhatsApp. Complete el envío desde allí y le confirmaremos la visita en minutos.</p>
                         <button class="form-success-reset" onclick="resetContactForm()">Enviar otra solicitud</button>
                     </div>
                 </div>
@@ -576,6 +646,11 @@
         </div>
     </footer>
 
+    <!-- ── CHAT PROACTIVE TOOLTIP ──────────────────────────── -->
+    <div class="chat-proactive-tip" id="chat-tip" aria-hidden="true" onclick="toggleChat()">
+        ¿Tiene algún problema con su lavadora, nevera o secadora?
+    </div>
+
     <!-- ── FLOATING CTAs ─────────────────────────────────────── -->
     <div class="float-ctas">
         <button class="float-chat-btn" id="chat-toggle-btn" onclick="toggleChat()" aria-label="Abrir asistente virtual">
@@ -601,8 +676,8 @@
             <div class="chat-header-info">
                 <div class="chat-avatar-icon" aria-hidden="true">🔧</div>
                 <div>
-                    <div class="chat-header-name">Asistente Arcadio Ramírez</div>
-                    <div class="chat-header-status">En línea</div>
+                    <div class="chat-header-name">Servicio Técnico Arcadio</div>
+                    <div class="chat-header-status">Le respondemos ahora</div>
                 </div>
             </div>
             <button class="chat-close-btn" onclick="toggleChat()" aria-label="Cerrar chat">✕</button>
@@ -649,16 +724,29 @@
                 window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMobileNav(); });
 
                 /* ── WHATSAPP FORM ── */
+                function limpiarErrores() {
+                    document.querySelectorAll('.field-error').forEach(function(el) { el.style.display = 'none'; });
+                    document.querySelectorAll('.field-error-input').forEach(function(el) { el.classList.remove('field-error-input'); });
+                }
+                function mostrarError(campoId) {
+                    var errorEl = document.getElementById('error-' + campoId);
+                    var inputEl = document.getElementById('f-' + campoId);
+                    if (errorEl) errorEl.style.display = 'block';
+                    if (inputEl) inputEl.classList.add('field-error-input');
+                }
                 function enviarWhatsApp() {
+                    limpiarErrores();
                     const nombre   = document.getElementById('f-nombre').value.trim();
                     const telefono = document.getElementById('f-telefono').value.trim();
                     const equipo   = document.getElementById('f-equipo').value.trim();
                     const problema = document.getElementById('f-problema').value.trim();
                     const barrio   = document.getElementById('f-barrio').value.trim();
-                    if (!nombre)   { alert('Por favor ingrese su nombre.');               return; }
-                    if (!telefono) { alert('Por favor ingrese su teléfono de contacto.'); return; }
-                    if (!equipo)   { alert('Por favor seleccione el electrodoméstico.');  return; }
-                    if (!problema) { alert('Por favor describa el problema del equipo.'); return; }
+                    var primerError = null;
+                    if (!nombre)   { mostrarError('nombre');   if (!primerError) primerError = 'f-nombre'; }
+                    if (!telefono) { mostrarError('telefono'); if (!primerError) primerError = 'f-telefono'; }
+                    if (!equipo)   { mostrarError('equipo');   if (!primerError) primerError = 'f-equipo'; }
+                    if (!problema) { mostrarError('problema'); if (!primerError) primerError = 'f-problema'; }
+                    if (primerError) { document.getElementById(primerError).focus(); return; }
                     const mensaje =
 `*SOLICITUD DE VISITA TÉCNICA*
 _Arcadio Ramírez - Servicio Técnico_
@@ -676,12 +764,20 @@ Solicito visita técnica a domicilio. ¡Gracias!`;
                     document.getElementById('form-success').classList.add('visible');
                 }
                 function resetContactForm() {
+                    limpiarErrores();
                     ['f-nombre','f-telefono','f-equipo','f-problema','f-barrio'].forEach(id => {
                         const el = document.getElementById(id);
                         if (el) el.value = '';
                     });
                     document.getElementById('form-fields').style.display = '';
                     document.getElementById('form-success').classList.remove('visible');
+                }
+
+                /* ── OPEN CHAT WITH PRE-FILLED PROBLEM ── */
+                function abrirChatConProblema(texto) {
+                    const panel = document.getElementById('chat-panel');
+                    if (panel && !panel.classList.contains('open')) toggleChat();
+                    setTimeout(function() { window.sendChatMessage(texto); }, 450);
                 }
 
                 /* ── FAQ ── */

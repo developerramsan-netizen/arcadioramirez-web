@@ -2227,6 +2227,225 @@ footer a {
     }
 }
 
+/* ── NAV WHATSAPP CTA ────────────────────────────────── */
+.nav-cta-wa {
+    background: #25D366 !important;
+    color: #fff !important;
+    box-shadow: 0 3px 12px rgba(37,211,102,.4) !important;
+    margin-right: -8px;
+}
+
+.nav-cta-wa:hover {
+    background: #20bc5a !important;
+    transform: scale(1.04);
+}
+
+/* ── FIELD ERRORS ────────────────────────────────────── */
+.field-error {
+    display: none;
+    color: #dc2626;
+    font-size: .76rem;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.field-error-input {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220,38,38,.1) !important;
+}
+
+/* ── PROBLEMAS SECTION ───────────────────────────────── */
+.problemas-section {
+    background: linear-gradient(180deg, #f4f6fb 0%, #eaeef8 100%);
+}
+
+.problemas-grid {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.problema-grupo {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 28px 24px;
+    border: 1.5px solid #e8ecf8;
+    box-shadow: 0 2px 12px rgba(26,46,171,.06);
+    transition: border-color .25s, box-shadow .25s;
+}
+
+.problema-grupo:hover {
+    border-color: rgba(26,46,171,.22);
+    box-shadow: 0 6px 28px rgba(26,46,171,.1);
+}
+
+.problema-grupo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #e8ecf8;
+}
+
+.problema-icono {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.problema-grupo-header h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--blue-dk);
+    letter-spacing: .02em;
+    margin: 0;
+}
+
+.problema-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.problema-btn {
+    width: 100%;
+    background: var(--gray-lt);
+    border: 1.5px solid #e8ecf8;
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'Barlow', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: background .18s, border-color .18s, color .18s, transform .15s;
+}
+
+.problema-btn:hover {
+    background: #eef1fd;
+    border-color: var(--blue);
+    color: var(--blue-dk);
+    transform: translateX(4px);
+}
+
+.problemas-cta {
+    text-align: center;
+    margin-top: 44px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1.5px solid #e8ecf8;
+    box-shadow: 0 2px 12px rgba(26,46,171,.06);
+}
+
+.problemas-cta p {
+    color: var(--gray);
+    margin-bottom: 16px;
+    font-size: .95rem;
+}
+
+.problemas-cta-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ── PRECIOS NOTA CTAs ───────────────────────────────── */
+.precios-nota-ctas {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nota-chat-btn {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .92rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+    box-shadow: 0 3px 10px rgba(26,46,171,.3);
+}
+
+.nota-chat-btn:hover {
+    background: var(--blue-dk);
+    transform: translateY(-1px);
+}
+
+/* ── FAQ CHAT CTA ────────────────────────────────────── */
+.faq-chat-cta {
+    text-align: center;
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--white);
+    border-radius: 14px;
+    border: 1.5px solid rgba(26,46,171,.12);
+    box-shadow: 0 2px 12px rgba(26,46,171,.06);
+}
+
+.faq-chat-cta p {
+    color: var(--gray);
+    margin-bottom: 14px;
+    font-size: .92rem;
+}
+
+.faq-chat-btn {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+    box-shadow: 0 3px 12px rgba(26,46,171,.3);
+}
+
+.faq-chat-btn:hover {
+    background: var(--blue-dk);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .problemas-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .problemas-grid {
+        max-width: 100%;
+    }
+    .problema-grupo {
+        padding: 22px 18px;
+    }
+    .precios-nota-ctas {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* ── ≤ 400px (very small phones) ── */
 @media (max-width: 400px) {
     nav {

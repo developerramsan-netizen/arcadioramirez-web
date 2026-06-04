@@ -10,12 +10,12 @@
     let isTyping    = false;
     let welcomeShown = false;
 
-    const WELCOME = '¡Hola! 👋 Soy el asistente de Arcadio Ramírez. Puedo ayudarte con precios, diagnósticos o agendar una visita. ¿En qué te puedo ayudar?';
+    const WELCOME = 'Hola, bienvenido. ¿Con qué equipo está teniendo problemas — lavadora, nevera o secadora?';
     const QUICK_REPLIES = [
-        'Mi lavadora no centrifuga',
-        'La nevera no enfría',
-        '¿Cuánto cuesta la reparación?',
-        'Quiero agendar una visita'
+        '🫧 Problema con lavadora',
+        '🧊 Problema con nevera',
+        '🌀 Problema con secadora',
+        '💰 Consultar sobre precios'
     ];
 
     /* ── helpers ─────────────────────────────────────── */
@@ -96,12 +96,14 @@
         isChatOpen = !isChatOpen;
         const panel = document.getElementById('chat-panel');
         const dot   = document.getElementById('chat-unread-dot');
+        const tip   = document.getElementById('chat-tip');
         if (!panel) return;
 
         if (isChatOpen) {
             panel.classList.add('open');
             panel.setAttribute('aria-hidden', 'false');
             if (dot) dot.classList.remove('visible');
+            if (tip) tip.classList.remove('visible');
 
             if (!welcomeShown) {
                 welcomeShown = true;
@@ -119,6 +121,13 @@
             panel.classList.remove('open');
             panel.setAttribute('aria-hidden', 'true');
         }
+    };
+
+    /* ── open chat with pre-filled message ──────────── */
+    window.abrirChatConProblema = function (texto) {
+        const panel = document.getElementById('chat-panel');
+        if (panel && !panel.classList.contains('open')) window.toggleChat();
+        setTimeout(function () { window.sendChatMessage(texto); }, 450);
     };
 
     /* ── send message ────────────────────────────────── */
@@ -169,7 +178,7 @@
                         `¡Solicito visita técnica a domicilio!`;
 
                     const url = 'https://wa.me/573103187093?text=' + encodeURIComponent(waMsg);
-                    addMessage('bot', `¡Perfecto, ${escapeHtml(parsed.nombre)}! Tu solicitud está lista. Toca el botón para enviarla por WhatsApp y te confirmamos la visita.`);
+                    addMessage('bot', `Perfecto, ${escapeHtml(parsed.nombre)}. Su solicitud está lista. Toque el botón para enviarla por WhatsApp y le confirmamos la visita.`);
                     addWhatsAppButton(url);
                     chatHistory.push({
                         role: 'assistant',
@@ -186,7 +195,7 @@
 
         } catch (err) {
             hideTyping();
-            addMessage('bot', 'Lo siento, hubo un error de conexión. Contáctanos directamente al <strong>310 318 7093</strong> o por WhatsApp.');
+            addMessage('bot', 'Lo sentimos, hubo un error de conexión. Contáctenos directamente al <strong>310 318 7093</strong> o por WhatsApp.');
         }
 
         isTyping = false;
@@ -201,13 +210,25 @@
             .replace(/"/g, '&quot;');
     }
 
-    /* ── show unread dot after 3s to draw attention ─── */
+    /* ── unread dot + proactive tooltip after delay ─── */
     document.addEventListener('DOMContentLoaded', () => {
+        // Punto de notificación a los 3s
         setTimeout(() => {
             if (!isChatOpen && !welcomeShown) {
                 const dot = document.getElementById('chat-unread-dot');
                 if (dot) dot.classList.add('visible');
             }
         }, 3000);
+
+        // Tooltip proactivo a los 7s (desaparece solo a los 14s)
+        setTimeout(() => {
+            if (!isChatOpen && !welcomeShown) {
+                const tip = document.getElementById('chat-tip');
+                if (tip) {
+                    tip.classList.add('visible');
+                    setTimeout(() => tip.classList.remove('visible'), 7000);
+                }
+            }
+        }, 7000);
     });
 })();

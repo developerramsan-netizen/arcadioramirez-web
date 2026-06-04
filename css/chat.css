@@ -111,11 +111,10 @@
 
 .chat-header-name {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: .92rem;
+    font-size: .95rem;
     font-weight: 800;
     color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: .03em;
+    letter-spacing: .02em;
     line-height: 1.2;
 }
 
@@ -416,13 +415,12 @@
         max-height: 440px;
     }
 
-    .float-chat-btn span { display: none; }
+    .float-chat-btn span { display: inline; font-size: .78rem; }
     .float-chat-btn {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        padding: 0;
-        justify-content: center;
+        width: auto;
+        height: auto;
+        border-radius: 100px;
+        padding: 9px 14px;
     }
 }
 
@@ -430,5 +428,54 @@
     .chat-panel {
         bottom: 110px;
         max-height: 400px;
+    }
+}
+
+/* ── PROACTIVE TOOLTIP ───────────────────────────────── */
+.chat-proactive-tip {
+    position: fixed;
+    bottom: 216px;
+    right: 20px;
+    background: var(--blue-dk);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 12px 12px 0 12px;
+    font-family: 'Barlow', sans-serif;
+    font-size: .84rem;
+    line-height: 1.5;
+    max-width: 230px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.28);
+    z-index: 199;
+    opacity: 0;
+    transform: translateY(8px) scale(.95);
+    pointer-events: none;
+    transition: opacity .35s ease, transform .35s ease;
+    cursor: pointer;
+}
+
+.chat-proactive-tip.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.chat-proactive-tip::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 16px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 8px solid var(--blue-dk);
+}
+
+@media (max-width: 768px) {
+    .chat-proactive-tip {
+        bottom: 183px;
+        right: 14px;
+        max-width: 200px;
+        font-size: .8rem;
     }
 }
