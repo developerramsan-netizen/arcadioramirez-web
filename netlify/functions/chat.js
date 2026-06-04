@@ -26,6 +26,9 @@ PROCESO:
 3. Con aprobación del cliente → reparación en el lugar con repuestos de calidad
 4. Se entrega el equipo funcionando con garantía
 
+NOTA IMPORTANTE — TALLER:
+En algunos casos el equipo debe trasladarse al taller: cuando la reparación es muy delicada, requiere más espacio del disponible en el domicilio, o demanda varios días de trabajo. Esto se informa al cliente con anticipación. Si alguien pregunta si siempre reparan en casa, explique esto con honestidad.
+
 CONOCIMIENTO TÉCNICO — SÍNTOMAS Y POSIBLES CAUSAS:
 
 LAVADORAS:
