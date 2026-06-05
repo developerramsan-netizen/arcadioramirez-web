@@ -431,6 +431,47 @@
     }
 }
 
+/* ── RATING WIDGET ───────────────────────────────────── */
+.chat-rating-widget {
+    align-self: flex-start;
+    background: var(--gray-lt);
+    border: 1px solid #e8ecf8;
+    border-radius: 4px 16px 16px 16px;
+    padding: 11px 15px;
+    margin-top: 2px;
+    animation: chat-msg-in .25s ease both;
+    max-width: 86%;
+}
+
+.chat-rating-label {
+    font-size: .82rem;
+    color: var(--gray);
+    margin-bottom: 9px;
+    line-height: 1.4;
+}
+
+.chat-rating-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.chat-star-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #d1d5db;
+    cursor: pointer;
+    padding: 2px 3px;
+    transition: color .15s, transform .15s;
+    line-height: 1;
+}
+
+.chat-star-btn:hover,
+.chat-star-btn.selected {
+    color: var(--gold);
+    transform: scale(1.18);
+}
+
 /* ── PROACTIVE TOOLTIP ───────────────────────────────── */
 .chat-proactive-tip {
     position: fixed;
