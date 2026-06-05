@@ -9,8 +9,6 @@
     let isChatOpen   = false;
     let isTyping     = false;
     let welcomeShown = false;
-    let ratingShown  = false;
-    let firstProblem = '';
 
     const WELCOME = 'Hola, bienvenido. ¿Con qué equipo está teniendo problemas — lavadora, nevera o secadora?';
     const QUICK_REPLIES = [
@@ -55,56 +53,7 @@
             </a>`;
         container.appendChild(div);
         scrollBottom();
-        // Mostrar calificación 3 segundos después de enviar a WhatsApp
-        setTimeout(addRatingWidget, 3000);
     }
-
-    function addRatingWidget() {
-        const container = document.getElementById('chat-messages');
-        if (!container || ratingShown) return;
-        ratingShown = true;
-        const div = document.createElement('div');
-        div.id = 'chat-rating';
-        div.className = 'chat-rating-widget';
-        div.innerHTML = `
-            <p class="chat-rating-label">¿Le fue útil esta consulta?</p>
-            <div class="chat-rating-stars" id="chat-rating-stars">
-                <button class="chat-star-btn" data-v="1" onclick="submitRating(1)" aria-label="1 estrella">★</button>
-                <button class="chat-star-btn" data-v="2" onclick="submitRating(2)" aria-label="2 estrellas">★</button>
-                <button class="chat-star-btn" data-v="3" onclick="submitRating(3)" aria-label="3 estrellas">★</button>
-                <button class="chat-star-btn" data-v="4" onclick="submitRating(4)" aria-label="4 estrellas">★</button>
-                <button class="chat-star-btn" data-v="5" onclick="submitRating(5)" aria-label="5 estrellas">★</button>
-            </div>`;
-        container.appendChild(div);
-        scrollBottom();
-    }
-
-    window.submitRating = function (value) {
-        const stars = document.querySelectorAll('.chat-star-btn');
-        stars.forEach((btn, i) => btn.classList.toggle('selected', i < value));
-
-        const label = document.querySelector('.chat-rating-label');
-        if (label) {
-            setTimeout(() => {
-                label.textContent = value >= 4
-                    ? '¡Gracias! Nos alegra haberle ayudado. 😊'
-                    : '¡Gracias por su calificación! Seguimos mejorando.';
-                const starsEl = document.getElementById('chat-rating-stars');
-                if (starsEl) starsEl.style.pointerEvents = 'none';
-            }, 400);
-        }
-
-        fetch('/.netlify/functions/rating', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                rating: value,
-                turns: Math.floor(chatHistory.length / 2),
-                problem: firstProblem,
-                timestamp: new Date().toISOString()
-            })
-        }).catch(() => {});
-    };
 
     function addQuickReplies() {
         const container = document.getElementById('chat-messages');
@@ -194,7 +143,6 @@
 
         addMessage('user', escapeHtml(text));
         chatHistory.push({ role: 'user', content: text });
-        if (!firstProblem) firstProblem = text;
 
         isTyping = true;
         const sendBtn = document.getElementById('chat-send-btn');
