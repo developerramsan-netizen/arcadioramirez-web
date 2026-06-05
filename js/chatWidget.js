@@ -186,6 +186,7 @@
                             `*Nombre:* ${parsed.nombre}\n` +
                             `*Barrio:* ${parsed.barrio}\n` +
                             `*Electrodoméstico:* ${parsed.equipo}\n` +
+                            `*Marca:* ${parsed.marca || 'No especificada'}\n` +
                             `*Problema:* ${parsed.problema}\n` +
                             `-----------------------------\n` +
                             `¡Solicito visita técnica a domicilio!`;
