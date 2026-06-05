@@ -168,6 +168,16 @@
             if (jsonMatch) {
                 try {
                     const parsed = JSON.parse(jsonMatch[0]);
+                    if (parsed.action === 'contacto_directo') {
+                        const url = 'https://wa.me/573103187093?text=' + encodeURIComponent('Hola, quiero hablar con un técnico de Arcadio Ramírez');
+                        addMessage('bot', 'Con gusto. Toque el botón y le atendemos de inmediato por WhatsApp.');
+                        addWhatsAppButton(url);
+                        chatHistory.push({ role: 'assistant', content: 'Cliente redirigido a WhatsApp para contacto directo.' });
+                        isTyping = false;
+                        if (sendBtn) sendBtn.disabled = false;
+                        return;
+                    }
+
                     if (parsed.action === 'whatsapp') {
                         const waMsg =
                             `*SOLICITUD DE VISITA TÉCNICA*\n` +
