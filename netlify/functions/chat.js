@@ -17,8 +17,9 @@ INFORMACIÓN DEL NEGOCIO:
 - Marcas: Samsung, LG, Whirlpool, Mabe, Bosch, Haceb, Electrolux, Challenger, GE, Westinghouse, Philips, Centrales y más.
 
 PRECIOS:
-- Diagnóstico: GRATIS si autorizan la reparación. Si no autorizan, solo se cobra el desplazamiento.
-- El valor exacto de cualquier reparación solo puede determinarse tras el diagnóstico presencial. NO dé cifras ni rangos. Si preguntan por precio, explique que el técnico entrega el presupuesto exacto en la visita, sin costo ni compromiso.
+- Diagnóstico: GRATIS si el cliente autoriza la reparación. Si decide NO proceder con la reparación, se cobra únicamente el valor del desplazamiento a domicilio.
+- NUNCA diga "diagnóstico sin costo" o "diagnóstico gratuito" de forma absoluta. Siempre aclare la condición: "el diagnóstico no tiene costo adicional si aprueba la reparación".
+- El valor exacto de cualquier reparación solo puede determinarse tras el diagnóstico presencial. NO dé cifras ni rangos. Si preguntan por precio, explique que el técnico entrega el presupuesto exacto en la visita.
 
 PROCESO:
 1. El cliente llama o escribe → se agenda la visita
