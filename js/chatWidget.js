@@ -163,33 +163,39 @@
 
             hideTyping();
 
-            // Detect WhatsApp action JSON from AI
-            try {
-                const parsed = JSON.parse(reply.trim());
-                if (parsed.action === 'whatsapp') {
-                    const waMsg =
-                        `*SOLICITUD DE VISITA TÉCNICA*\n` +
-                        `_Arcadio Ramírez - Servicio Técnico_\n` +
-                        `-----------------------------\n` +
-                        `*Nombre:* ${parsed.nombre}\n` +
-                        `*Barrio:* ${parsed.barrio}\n` +
-                        `*Electrodoméstico:* ${parsed.equipo}\n` +
-                        `*Problema:* ${parsed.problema}\n` +
-                        `-----------------------------\n` +
-                        `¡Solicito visita técnica a domicilio!`;
+            // Detect WhatsApp action JSON from AI (even if comes with text before/after)
+            const jsonMatch = reply.match(/\{[^{}]*"action"\s*:\s*"whatsapp"[^{}]*\}/s);
+            if (jsonMatch) {
+                try {
+                    const parsed = JSON.parse(jsonMatch[0]);
+                    if (parsed.action === 'whatsapp') {
+                        const waMsg =
+                            `*SOLICITUD DE VISITA TÉCNICA*\n` +
+                            `_Arcadio Ramírez - Servicio Técnico_\n` +
+                            `-----------------------------\n` +
+                            `*Nombre:* ${parsed.nombre}\n` +
+                            `*Barrio:* ${parsed.barrio}\n` +
+                            `*Electrodoméstico:* ${parsed.equipo}\n` +
+                            `*Problema:* ${parsed.problema}\n` +
+                            `-----------------------------\n` +
+                            `¡Solicito visita técnica a domicilio!`;
 
-                    const url = 'https://wa.me/573103187093?text=' + encodeURIComponent(waMsg);
-                    addMessage('bot', `Perfecto, ${escapeHtml(parsed.nombre)}. Su solicitud está lista. Toque el botón para enviarla por WhatsApp y le confirmamos la visita.`);
-                    addWhatsAppButton(url);
-                    chatHistory.push({
-                        role: 'assistant',
-                        content: `Solicitud lista para ${parsed.nombre} en ${parsed.barrio}.`
-                    });
-                    isTyping = false;
-                    if (sendBtn) sendBtn.disabled = false;
-                    return;
-                }
-            } catch (_) { /* not JSON – normal reply */ }
+                        const url = 'https://wa.me/573103187093?text=' + encodeURIComponent(waMsg);
+                        // Si el AI agregó texto antes del JSON, mostrarlo limpio
+                        const textoBefore = reply.slice(0, reply.indexOf(jsonMatch[0])).trim();
+                        if (textoBefore) addMessage('bot', escapeHtml(textoBefore).replace(/\n/g, '<br>'));
+                        addMessage('bot', `Su solicitud está lista. Toque el botón para enviarla por WhatsApp y le confirmamos la visita.`);
+                        addWhatsAppButton(url);
+                        chatHistory.push({
+                            role: 'assistant',
+                            content: `Solicitud lista para ${parsed.nombre} en ${parsed.barrio}.`
+                        });
+                        isTyping = false;
+                        if (sendBtn) sendBtn.disabled = false;
+                        return;
+                    }
+                } catch (_) { /* JSON malformed – show as text */ }
+            }
 
             addMessage('bot', escapeHtml(reply).replace(/\n/g, '<br>'));
             chatHistory.push({ role: 'assistant', content: reply });
