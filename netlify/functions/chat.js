@@ -129,7 +129,7 @@ Cliente: "Soy María, vivo en Kennedy"
 Respuesta: {"action":"whatsapp","nombre":"María","barrio":"Kennedy","equipo":"Lavadora","problema":"No centrifuga"}
 
 Cliente (misma conversación, nueva pregunta): "¿Y cuánto puede costar?"
-Respuesta: "El costo exacto lo define el técnico tras revisar el aparato — no se puede estimar sin verlo. María, ¿quedamos con la visita? "`;
+Respuesta: "El costo exacto lo define el técnico tras revisar el aparato — no se puede estimar sin verlo. María, ¿quedamos con la visita?"`;
 
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
