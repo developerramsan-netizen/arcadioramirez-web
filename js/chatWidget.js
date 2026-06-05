@@ -164,7 +164,7 @@
             hideTyping();
 
             // Detect WhatsApp action JSON from AI (even if comes with text before/after)
-            const jsonMatch = reply.match(/\{[^{}]*"action"\s*:\s*"whatsapp"[^{}]*\}/s);
+            const jsonMatch = reply.match(/\{[^{}]*"action"\s*:\s*"(?:whatsapp|contacto_directo)"[^{}]*\}/s);
             if (jsonMatch) {
                 try {
                     const parsed = JSON.parse(jsonMatch[0]);
