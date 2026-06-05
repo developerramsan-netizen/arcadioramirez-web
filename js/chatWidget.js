@@ -109,6 +109,7 @@
                 welcomeShown = true;
                 setTimeout(() => {
                     addMessage('bot', WELCOME);
+                    chatHistory.push({ role: 'assistant', content: WELCOME });
                     addQuickReplies();
                 }, 280);
             }
