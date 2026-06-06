@@ -57,7 +57,6 @@ h1, h2, h3, h4 {
     right: 0;
     z-index: 101;
     /* Gradiente azul oscuro → dorado → azul: toca ambos colores de marca */
-    background: linear-gradient(90deg, var(--blue-dk) 0%, #1a3399 30%, #7a5500 65%, #a07000 80%, var(--blue-dk) 100%);
     background: linear-gradient(90deg, #0d1a6e 0%, #1a2eab 35%, #7a5c00 60%, #c99a10 75%, #0d1a6e 100%);
     border-bottom: 1px solid rgba(240,192,64,.4);
     height: var(--announce-h);
@@ -88,10 +87,10 @@ h1, h2, h3, h4 {
 }
 
 .announce-cta-link {
-    color: var(--gold) !important;
+    color: #ffffff !important;
     text-decoration: none;
-    font-weight: 800 !important;
-    border: 1px solid rgba(240,192,64,.5);
+    font-weight: 600 !important;
+    border: 1px solid rgba(255,255,255,.4);
     padding: 2px 10px;
     border-radius: 100px;
     transition: background .2s;
@@ -99,7 +98,7 @@ h1, h2, h3, h4 {
 }
 
     .announce-cta-link:hover {
-        background: rgba(240,192,64,.15);
+        background: rgba(255,255,255,.15);
     }
 
 /* ── Desktop: estático centrado ── */
