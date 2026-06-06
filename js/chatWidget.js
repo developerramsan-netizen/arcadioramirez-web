@@ -178,8 +178,20 @@
                 try {
                     const parsed = JSON.parse(jsonMatch[0]);
                     if (parsed.action === 'contacto_directo') {
-                        const url = 'https://wa.me/573103187093?text=' + encodeURIComponent('Hola, quiero hablar con un técnico de Arcadio Ramírez');
-                        addMessage('bot', 'Con gusto. Toque el botón y le atendemos de inmediato por WhatsApp.');
+                        const userMsgs = chatHistory
+                            .filter(m => m.role === 'user')
+                            .map(m => `• ${m.content}`)
+                            .join('\n');
+                        const waMsg =
+                            `*SOLICITUD DE ATENCIÓN TÉCNICA*\n` +
+                            `_Arcadio Ramírez - Servicio Técnico_\n` +
+                            `-----------------------------\n` +
+                            `*Consulta previa en chat:*\n` +
+                            `${userMsgs}\n` +
+                            `-----------------------------\n` +
+                            `Solicito hablar directamente con un técnico.`;
+                        const url = 'https://wa.me/573103187093?text=' + encodeURIComponent(waMsg);
+                        addMessage('bot', 'Con gusto. Toque el botón y le atendemos de inmediato por WhatsApp — el técnico ya verá el resumen de su consulta.');
                         addWhatsAppButton(url);
                         chatHistory.push({ role: 'assistant', content: 'Cliente redirigido a WhatsApp para contacto directo.' });
                         isTyping = false;
