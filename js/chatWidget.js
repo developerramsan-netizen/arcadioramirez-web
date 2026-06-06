@@ -23,6 +23,13 @@
         return new Date().toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' });
     }
 
+    function resetViewportZoom() {
+        const vp = document.querySelector('meta[name=viewport]');
+        if (!vp) return;
+        vp.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+        setTimeout(() => { vp.content = 'width=device-width, initial-scale=1.0'; }, 300);
+    }
+
     function scrollBottom() {
         const el = document.getElementById('chat-messages');
         if (el) el.scrollTop = el.scrollHeight;
@@ -121,6 +128,7 @@
         } else {
             panel.classList.remove('open');
             panel.setAttribute('aria-hidden', 'true');
+            resetViewportZoom();
         }
     };
 
@@ -136,7 +144,8 @@
         const input = document.getElementById('chat-input');
         const text  = (override || (input && input.value) || '').trim();
         if (!text || isTyping) return;
-        if (input) input.value = '';
+        if (input) { input.value = ''; input.blur(); }
+        resetViewportZoom();
 
         // Remove lingering quick replies
         const qr = document.getElementById('chat-quick-replies');

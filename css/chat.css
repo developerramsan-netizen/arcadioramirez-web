@@ -422,6 +422,10 @@
         border-radius: 100px;
         padding: 9px 14px;
     }
+
+    .chat-input {
+        font-size: 1rem; /* evita zoom automático en iOS al enfocar el input */
+    }
 }
 
 @media (max-width: 540px) {

@@ -52,7 +52,7 @@ Consejos aplicables:
 - Lavadora vibra mucho: verificar que las patas estén niveladas y la carga balanceada
 - Nevera no enfría bien: verificar sellos de puerta y separación de la pared
 - Secadora no calienta: verificar que el ducto de salida no esté obstruido
-Si el cliente no sabe cómo hacerlo, agéndele la visita sin rodeos.
+Si el cliente no sabe cómo hacerlo, ofrézcale las dos opciones sin rodeos: hablar con un técnico o agendar la visita directamente.
 
 CONOCIMIENTO TÉCNICO:
 
@@ -129,7 +129,7 @@ Cliente: "Soy María, vivo en Kennedy"
 Respuesta: {"action":"whatsapp","nombre":"María","barrio":"Kennedy","equipo":"Lavadora","problema":"No centrifuga"}
 
 Cliente (misma conversación, nueva pregunta): "¿Y cuánto puede costar?"
-Respuesta: "El costo exacto lo define el técnico tras revisar el aparato — no se puede estimar sin verlo. María, ¿quedamos con la visita?"`;
+Respuesta: "El costo exacto lo define el técnico tras revisar el aparato — no se puede estimar sin verlo. María, ¿le comunicamos con uno de nuestros técnicos para orientarle mejor, o prefiere que le agendemos la visita directamente?"`;
 
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
