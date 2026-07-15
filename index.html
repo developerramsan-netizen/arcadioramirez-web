@@ -19,7 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/brands.css" />
-    <link rel="stylesheet" href="css/chat.css" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -325,7 +324,7 @@
             </div>
             <div class="problemas-cta">
                 <p>¿Su problema no está en esta lista?</p>
-                <button class="btn-primary problemas-cta-btn" onclick="toggleChat()">💬 Descríbanos qué está pasando</button>
+                <button class="btn-primary problemas-cta-btn" onclick="abrirChatConProblema('Hola, quiero describir un problema con mi electrodoméstico')">💬 Descríbanos qué está pasando</button>
             </div>
         </div>
     </section>
@@ -469,7 +468,7 @@
                 💡 <strong>¿No sabe si vale la pena reparar su equipo?</strong>
                 Cuéntenos el problema y le orientamos sin costo ni compromiso.
                 <span class="precios-nota-ctas">
-                    <button class="nota-chat-btn" onclick="toggleChat()">💬 Consultar al asesor</button>
+                    <button class="nota-chat-btn" onclick="abrirChatConProblema('Hola, quiero una asesoría sobre la reparación de mi electrodoméstico')">💬 Consultar al asesor</button>
                     <a href="https://wa.me/573103187093" target="_blank">o escribir por WhatsApp →</a>
                 </span>
             </div>
@@ -558,7 +557,7 @@
             </div>
             <div class="faq-chat-cta">
                 <p>¿Tiene dudas sobre lo que le pasa a su equipo?</p>
-                <button class="faq-chat-btn" onclick="toggleChat()">💬 Consultar al asesor</button>
+                <button class="faq-chat-btn" onclick="abrirChatConProblema('Hola, tengo dudas sobre lo que le pasa a mi electrodoméstico')">💬 Consultar al asesor</button>
             </div>
 
             <div class="faq-cta">
@@ -720,20 +719,8 @@
         </div>
     </footer>
 
-    <!-- ── CHAT PROACTIVE TOOLTIP ──────────────────────────── -->
-    <div class="chat-proactive-tip" id="chat-tip" aria-hidden="true" onclick="toggleChat()">
-        ¿Tiene algún problema con su lavadora, nevera o secadora?
-    </div>
-
     <!-- ── FLOATING CTAs ─────────────────────────────────────── -->
     <div class="float-ctas">
-        <button class="float-chat-btn" id="chat-toggle-btn" onclick="toggleChat()" aria-label="Abrir asistente virtual">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-            </svg>
-            <span>Asistente</span>
-            <span class="chat-unread-dot" id="chat-unread-dot" aria-hidden="true"></span>
-        </button>
         <a href="https://wa.me/573103187093" class="float-whatsapp" target="_blank" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -744,35 +731,8 @@
         <a href="tel:3103187093" class="float-phone" aria-label="Llamar">📞 <span>Llamar</span></a>
     </div>
 
-    <!-- ── CHAT PANEL ────────────────────────────────────────── -->
-    <div class="chat-panel" id="chat-panel" aria-hidden="true" role="dialog" aria-label="Asistente virtual Arcadio Ramírez">
-        <div class="chat-header">
-            <div class="chat-header-info">
-                <div class="chat-avatar-icon" aria-hidden="true">🔧</div>
-                <div>
-                    <div class="chat-header-name">Servicio Técnico Arcadio</div>
-                    <div class="chat-header-status">Le respondemos ahora</div>
-                </div>
-            </div>
-            <button class="chat-close-btn" onclick="toggleChat()" aria-label="Cerrar chat">✕</button>
-        </div>
-        <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
-        <div class="chat-input-area">
-            <input class="chat-input" id="chat-input" type="text"
-                   placeholder="Escribe tu consulta..."
-                   onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChatMessage();}"
-                   autocomplete="off" />
-            <button class="chat-send-btn" id="chat-send-btn" onclick="sendChatMessage()" aria-label="Enviar">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-
     <link rel="stylesheet" href="css/reviewsExtra.css" />
     <script src="js/googleReviews.js"></script>
-    <script src="js/chatWidget.js"></script>
 
     <script>
                 /* ── HAMBURGER MENU ── */
@@ -847,11 +807,11 @@ Solicito visita técnica a domicilio. ¡Gracias!`;
                     document.getElementById('form-success').classList.remove('visible');
                 }
 
-                /* ── OPEN CHAT WITH PRE-FILLED PROBLEM ── */
+                /* ── OPEN WHATSAPP WITH PRE-FILLED PROBLEM ── */
                 function abrirChatConProblema(texto) {
-                    const panel = document.getElementById('chat-panel');
-                    if (panel && !panel.classList.contains('open')) toggleChat();
-                    setTimeout(function() { window.sendChatMessage(texto); }, 450);
+                    const base = 'https://wa.me/573103187093';
+                    const url = texto ? base + '?text=' + encodeURIComponent(texto) : base;
+                    window.open(url, '_blank');
                 }
 
                 /* ── FAQ ── */
